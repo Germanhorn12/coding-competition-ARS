@@ -20,3 +20,6 @@ let epicGuy = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(epicGuy)
 scene.cameraFollowSprite(epicGuy)
+forever(function () {
+	
+})
