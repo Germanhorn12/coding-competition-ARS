@@ -53,3 +53,6 @@ controller.moveSprite(epicGuy)
 scene.cameraFollowSprite(epicGuy)
 info.setLife(6)
 let invincibility = 0
+forever(function () {
+    pause(20000)
+})
