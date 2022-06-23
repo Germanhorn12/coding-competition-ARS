@@ -1,10 +1,15 @@
-scene.onOverlapTile(SpriteKind.Player, assets.tile`cactus`, function (sprite, location) {
-    if (invincibility == 0) {
-        info.changeLifeBy(-1)
-        invincibility = 1
-    }
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
+    info.changeScoreBy(10)
+    tiles.setTileAt(location, assets.tile`myTile2`)
 })
-let invincibility = 0
+scene.onOverlapTile(SpriteKind.Player, assets.tile`cactus`, function (sprite, location) {
+    tiles.setTileAt(location, assets.tile`myTile6`)
+    info.changeLifeBy(-1)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, location) {
+    info.changeScoreBy(10)
+    tiles.setTileAt(location, sprites.castle.tileGrass1)
+})
 scene.setBackgroundColor(7)
 tiles.setCurrentTilemap(tilemap`level1`)
 let epicGuy = sprites.create(img`
@@ -47,10 +52,4 @@ tiles.placeOnTile(First_guy, tiles.getTileLocation(63, 63))
 controller.moveSprite(epicGuy)
 scene.cameraFollowSprite(epicGuy)
 info.setLife(6)
-invincibility = 0
-forever(function () {
-    if (invincibility == 1) {
-        pause(1000)
-        invincibility = 0
-    }
-})
+let invincibility = 0
