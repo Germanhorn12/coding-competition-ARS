@@ -2,6 +2,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, l
     info.changeScoreBy(10)
     tiles.setTileAt(location, assets.tile`myTile2`)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    info.changeLifeBy(-1)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`cactus`, function (sprite, location) {
     tiles.setTileAt(location, assets.tile`myTile6`)
     info.changeLifeBy(-1)
@@ -55,8 +59,8 @@ scene.cameraFollowSprite(epicGuy)
 info.setLife(6)
 let invincibility = 0
 forever(function () {
-    let mySprite: Sprite = null
     pause(20000)
-    goblin = sprites.createProjectileFromSide(assets.image`Goblin`, 50, 50)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 0))
+    goblin = sprites.createProjectileFromSide(assets.image`Goblin`, 75, 75)
+    tiles.placeOnTile(goblin, tiles.getTileLocation(randint(0, 63), randint(0, 63)))
+    goblin.follow(epicGuy)
 })
