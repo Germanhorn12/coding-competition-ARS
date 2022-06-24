@@ -10,6 +10,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, l
     info.changeScoreBy(10)
     tiles.setTileAt(location, sprites.castle.tileGrass1)
 })
+let goblin: Sprite = null
 scene.setBackgroundColor(7)
 tiles.setCurrentTilemap(tilemap`level1`)
 let epicGuy = sprites.create(img`
@@ -54,5 +55,8 @@ scene.cameraFollowSprite(epicGuy)
 info.setLife(6)
 let invincibility = 0
 forever(function () {
+    let mySprite: Sprite = null
     pause(20000)
+    goblin = sprites.createProjectileFromSide(assets.image`Goblin`, 50, 50)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 0))
 })
