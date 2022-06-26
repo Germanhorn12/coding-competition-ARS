@@ -1,3 +1,6 @@
+namespace SpriteKind {
+    export const NPC = SpriteKind.create()
+}
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
     info.changeScoreBy(10)
     tiles.setTileAt(location, assets.tile`myTile2`)
@@ -52,12 +55,14 @@ let First_guy = sprites.create(img`
     . . . . f 6 f . f 6 f . . . . . 
     . . . . f 6 f . f 6 f . . . . . 
     . . . . f f f . f f f . . . . . 
-    `, SpriteKind.Player)
+    `, SpriteKind.NPC)
 tiles.placeOnTile(First_guy, tiles.getTileLocation(63, 63))
 controller.moveSprite(epicGuy)
 scene.cameraFollowSprite(epicGuy)
 info.setLife(6)
 let invincibility = 0
+let megaBoss = sprites.create(assets.image`bigTroll`, SpriteKind.Enemy)
+tiles.placeOnTile(megaBoss, tiles.getTileLocation(33, 4))
 forever(function () {
     pause(20000)
     goblin = sprites.createProjectileFromSide(assets.image`Goblin`, 75, 75)

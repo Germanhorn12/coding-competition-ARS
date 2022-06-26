@@ -4,6 +4,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Goblin"
     },
+    "image2": {
+        "data": "hwQgACAAAAAAAAAAAO/u7u7+d///////AAAAAADv7u7u/nf/7nd39wAAAAAA7+7u7v53/+5+d/cAAAAAAO/u7u7+d//ufnf3AAAAAAD/////////7nd39wAAAAAA7+7u7u7u/+5+d/cAAAAAAO/u7u7u7v/ufnf3AAAAAADv7u7u7u7/7u539wBV////7+7u7u7u/+5+d/dQdXd39+/u7u7u7v/ufnf3Vf//d/fv7u7u7u7/7nd391X18Xf37+7u7u7u/+53d/dVVfF39+/u7u7u7v/ud3f3VfX/d/fv7u7u7u7//////1V3d3fy7+7u7u7u/wAAAABVdXcn9+/u7u7u7v8AAAAAVXV3J/fv7u7u7u7/AAAAAFV3d3fy7+7u7u7u/wAAAABV//939+/u7u7u7v//////VfXxd/fv7u7u7u7/7nd391X18Xf37+7u7u7u/+53d/dVVf939+/u7u7u7v/ufnf3UHV3d/fv7u7u7u7/7n539wBV////7+7u7u7u/+7ud/cAAAAAAO/u7u7u7v/ufnf3AAAAAADv7u7u7u7/7nd39wAAAAAA7+7u7u7u/+53d/cAAAAAAP/////////ud3f3AAAAAADv7u7u/nf/7n539wAAAAAA7+7u7v53/+5+d/cAAAAAAO/u7u7+d//ud3f3AAAAAADv7u7u/nf//////w==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "bigTroll"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
